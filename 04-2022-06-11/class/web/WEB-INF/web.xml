@@ -3,4 +3,40 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <!--增-->
+    <servlet>
+        <servlet-name>TeacherAddServlet</servlet-name>
+        <servlet-class>onclass.servlet.TeacherAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TeacherAddServlet</servlet-name>
+        <url-pattern>/TeacherAddServlet</url-pattern>
+    </servlet-mapping>
+    <!--删-->
+    <servlet>
+        <servlet-name>TeacherDeleteServlet</servlet-name>
+        <servlet-class>onclass.servlet.TeacherDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TeacherDeleteServlet</servlet-name>
+        <url-pattern>/TeacherDeleteServlet</url-pattern>
+    </servlet-mapping>
+    <!--查-->
+    <servlet>
+        <servlet-name>TeacherSelectServlet</servlet-name>
+        <servlet-class>onclass.servlet.TeacherSelectServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TeacherSelectServlet</servlet-name>
+        <url-pattern>/TeacherSelectServlet</url-pattern>
+    </servlet-mapping>
+    <!--改-->
+    <servlet>
+        <servlet-name>TeacherUpdateServlet</servlet-name>
+        <servlet-class>onclass.servlet.TeacherUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TeacherUpdateServlet</servlet-name>
+        <url-pattern>/TeacherUpdateServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

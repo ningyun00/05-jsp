@@ -1,0 +1,32 @@
+
+table{
+    border:5px;
+
+}
+
+
+a{
+    text-decoration: none;
+}
+#div1_underlying {
+    width: 700px;
+    height: 800px;
+}
+
+#div2_underlying {
+    width: 700px;
+    height: auto;
+}
+
+#h2_div2_underlying {
+    color: aqua;
+}
+
+#table1_h2_div2 {
+
+    border: 1px solid red;
+
+}
+#tbody1_thead1_table1{
+
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <!--增-->
+    <servlet><!--注册-->
+        <servlet-name>addEmpServlet</servlet-name><!--注册名-->
+        <servlet-class>ning.ying.servlet.addEmpServlet</servlet-class><!--注册位置-->
+    </servlet>
+    <servlet-mapping><!--挂牌-->
+        <servlet-name>addEmpServlet</servlet-name><!--登记名-->
+        <url-pattern>/addEmpServlet</url-pattern><!--浏览器访问方式-->
+    </servlet-mapping>
+    <!--查-->
+    <servlet><!--注册-->
+        <servlet-name>selectEmpServlet</servlet-name><!--注册名-->
+        <servlet-class>ning.ying.servlet.selectEmpServlet</servlet-class><!--注册位置-->
+    </servlet>
+    <servlet-mapping><!--挂牌-->
+        <servlet-name>selectEmpServlet</servlet-name><!--登记名-->
+        <url-pattern>/selectEmpServlet</url-pattern><!--浏览器访问方式-->
+    </servlet-mapping>
+    <!--删-->
+    <servlet><!--注册-->
+        <servlet-name>deleteEmpServlet</servlet-name><!--注册名-->
+        <servlet-class>ning.ying.servlet.deleteEmpServlet</servlet-class><!--注册位置-->
+    </servlet>
+    <servlet-mapping><!--挂牌-->
+        <servlet-name>deleteEmpServlet</servlet-name><!--登记名-->
+        <url-pattern>/deleteEmpServlet</url-pattern><!--浏览器访问方式-->
+    </servlet-mapping>
+    <!--改-->
+    <servlet><!--注册-->
+        <servlet-name>updateEmpServlet</servlet-name><!--注册名-->
+        <servlet-class>ning.ying.servlet.updateEmpServlet</servlet-class><!--注册位置-->
+    </servlet>
+    <servlet-mapping><!--挂牌-->
+        <servlet-name>updateEmpServlet</servlet-name><!--登记名-->
+        <url-pattern>/updateEmpServlet</url-pattern><!--浏览器访问方式-->
+    </servlet-mapping>
+</web-app>

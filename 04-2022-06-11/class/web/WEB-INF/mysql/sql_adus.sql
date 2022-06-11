@@ -1,0 +1,10 @@
+CREATE DATABASE class;
+CREATE TABLE teacher(
+	TID  INT AUTO_INCREMENT PRIMARY KEY,
+	TName VARCHAR(15),
+	TSubject VARCHAR(15)
+);
+INSERT INTO teacher VALUES(NULL,'年糕','神话学家');
+SELECT * FROM teacher;
+DELETE FROM teacher WHERE TID = 1;
+UPDATE teacher SET TName = '2',TSubject = '2' WHERE TID = 67;

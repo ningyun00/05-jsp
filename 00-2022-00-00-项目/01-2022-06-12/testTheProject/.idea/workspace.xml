@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="class:war exploded" />
+      <artifact name="testTheProject:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="718183ad-df22-40fd-b4b3-a2b5b8fda5be" name="Default Changelist" comment="" />
+    <list default="true" id="52788475-ecc5-4128-b66e-a732ba261058" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,13 +15,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="CSS File" />
         <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -30,7 +30,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectId" id="2AQEo2W8NddTWDIqEyRAYvCcxOt" />
+  <component name="ProjectId" id="2ATssF4eHRmGK5mzazvp4UvhGad" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -44,36 +44,49 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../04-javaoop/00-25-2022-06-02-Holiday" />
-    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="last_opened_file_path" value="D:/0-3-学习/S2/05-jsp/30.JSP5(基于Servlet的增删改查复习总结)/1.课堂案例/StudentModule" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\S2\05-jsp\04-2022-06-11\class\web\WEB-INF\lib" />
+      <recent name="E:\S2\05-jsp\00-2022-00-00-项目\01-2022-06-12\testTheProject\web\WEB-INF\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\S2\05-jsp\04-2022-06-11\class\web\jsp\onclass" />
-      <recent name="E:\S2\05-jsp\04-2022-06-11\class\web" />
+      <recent name="E:\S2\05-jsp\00-2022-00-00-项目\01-2022-06-12\testTheProject\web" />
+      <recent name="E:\S2\05-jsp\00-2022-00-00-项目\01-2022-06-12\testTheProject\web\WEB-INF" />
+      <recent name="E:\S2\05-jsp\00-2022-00-00-项目\01-2022-06-12\testTheProject\web\css" />
+      <recent name="E:\S2\05-jsp\00-2022-00-00-项目\01-2022-06-12\testTheProject\web\WEB-INF\css" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 7.0.52" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.52" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/class/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/ning.ying/" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
-        <artifact name="class:war exploded">
+        <artifact name="testTheProject:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/class" />
+            <option name="CONTEXT_PATH" value="/ning.ying" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="267776f7-141a-4165-ad16-2251b6ea7a6b" />
+        <option name="BASE_DIRECTORY_NAME" value="13c9a51c-7d9b-4c32-815c-67ed6ff76fac" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -81,7 +94,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51576" />
+        <option name="DEBUG_PORT" value="65089" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -146,7 +159,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="class:war exploded" />
+          <artifact name="testTheProject:war exploded" />
         </option>
       </method>
     </configuration>
@@ -154,30 +167,18 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="718183ad-df22-40fd-b4b3-a2b5b8fda5be" name="Default Changelist" comment="" />
-      <created>1654933580268</created>
+      <changelist id="52788475-ecc5-4128-b66e-a732ba261058" name="Default Changelist" comment="" />
+      <created>1655045114837</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1654933580268</updated>
-      <workItem from="1654933582297" duration="10718000" />
-      <workItem from="1654963608295" duration="11736000" />
-      <workItem from="1655011973555" duration="7331000" />
+      <updated>1655045114837</updated>
+      <workItem from="1655045118443" duration="5721000" />
+      <workItem from="1655081497403" duration="862000" />
+      <workItem from="1655091012498" duration="2424000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
