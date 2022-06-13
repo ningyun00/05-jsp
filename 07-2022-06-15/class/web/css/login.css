@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#div1_bottom, #div2_div1 {
+    margin: auto;
+    padding: 0;
+    width: 400px;
+}
+#div2_div1{
+    margin-top: 200px;
+}
+#table1_div2 {
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    text-align: center;
+}
+
+tr, td {
+    width: 100px;
+    height: 25px;
+}
+
+#p2_table1,#p3_table1 {
+    text-align: right;
+}
+#input3_tbody1{
+    width: 100px;
+    height: 25px;
+}

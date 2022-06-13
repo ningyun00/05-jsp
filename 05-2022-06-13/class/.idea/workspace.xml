@@ -6,20 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8dbcbbb7-89f8-4f90-952f-24fe68624a5f" name="Default Changelist" comment="" />
+    <list default="true" id="2175bb04-39fc-46ed-8e22-5725fce1dba3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -39,47 +30,35 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectId" id="2AV6kIsmsu76MWozuEuHMzXy7i2" />
+  <component name="ProjectId" id="2AY8SIPUQMEWjTd29ktAa4nPBZH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showVisibilityIcons" value="true" />
-    <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/js" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../06-2022-06-14/class" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.splitter.proportion" value="0.21956857" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\S2\05-jsp\05-2022-06-13\class\web\js" />
       <recent name="E:\S2\05-jsp\05-2022-06-13\class\web\WEB-INF\lib" />
+      <recent name="E:\S2\05-jsp\05-2022-06-13\class\web\WEB-INF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\S2\05-jsp\05-2022-06-13\class\web" />
+      <recent name="E:\S2\05-jsp\05-2022-06-13\class\web\WEB-INF" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.52">
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ning.ying.Test" />
-      <module name="class" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ning.ying.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -94,8 +73,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 7.0.52" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.52" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="class:war exploded">
           <settings>
@@ -104,7 +82,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="06f27adc-c56b-46ef-9ebb-23da6e2235e6" />
+        <option name="BASE_DIRECTORY_NAME" value="9cefff29-2ae6-4fe1-9bc3-8b78c7084d9a" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -112,7 +90,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51338" />
+        <option name="DEBUG_PORT" value="64908" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -181,26 +159,27 @@
         </option>
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Test" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8dbcbbb7-89f8-4f90-952f-24fe68624a5f" name="Default Changelist" comment="" />
-      <created>1655082547544</created>
+      <changelist id="2175bb04-39fc-46ed-8e22-5725fce1dba3" name="Default Changelist" comment="" />
+      <created>1655175157687</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1655082547544</updated>
-      <workItem from="1655082550786" duration="4859000" />
-      <workItem from="1655101262553" duration="33603000" />
+      <updated>1655175157687</updated>
+      <workItem from="1655175160291" duration="95000" />
+      <workItem from="1655177829465" duration="105000" />
+      <workItem from="1655178118171" duration="1964000" />
+      <workItem from="1655180163291" duration="5267000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

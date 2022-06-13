@@ -60,7 +60,8 @@
                                     </p>
                                 </td>
                                 <td>
-                                    <input type="text" style="color: red" id="input2_tfoot2" name="EName" value="<%= emp.getEName()%>">
+                                    <input type="text" style="color: red" id="input2_tfoot2" name="EName"
+                                           value="<%= emp.getEName()%>">
                                 </td>
                                 <td>
                                     <% if ("男".equals(emp.getESex())) {%>
@@ -72,13 +73,18 @@
                                     <%}%>
                                 </td>
                                 <td>
-                                    <input type="text" style="color: red" id="input3_tfoot2" width="50" name="ETelephone" value="<%= emp.getETelephone()%>">
+                                    <input type="text" style="color: red" id="input3_tfoot2" width="50"
+                                           name="ETelephone"
+                                           value="<%= emp.getETelephone()%>">
                                 </td>
                                 <td>
-                                    <input width="50" style="color: red" type="date" value="<%= emp.getEHireDate()%>" name="EHireDate">
+                                    <input width="50" style="color: red" type="date" value="<%= emp.getEHireDate()%>"
+                                           name="EHireDate">
                                 </td>
                                 <td colspan="2">
-                                    <button type="submit" style="color: black;background-color: red;" id="button3_tfoot2" name="EID" value="<%=emp.getEID()%>">
+                                    <button type="submit" style="color: black;background-color: red;"
+                                            id="button3_tfoot2" name="EID"
+                                            value="<%=emp.getEID()%>">
                                         修改
                                     </button>
                                 </td>
@@ -120,7 +126,8 @@
                                     </p>
                                 </td>
                                 <td>
-                                    <button id="button1_tbody1" name="update1_tbody1" formaction="/ning.ying/index.jsp" value="<%= emp.getEID()%>">
+                                    <button id="button1_tbody1" name="update1_tbody1" formaction="/ning.ying/index.jsp"
+                                            value="<%= emp.getEID()%>">
                                         修改
                                     </button>
                                 </td>

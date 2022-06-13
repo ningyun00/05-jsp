@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#div1_bottom {
+    margin: auto;
+    padding: 0;
+    width: 817px;
+}
+
+#div2_div1 {
+    margin: auto;
+    padding: 0;
+    width: 871px;
+}
+
+#table1_div2 {
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+#th0_thead1,#th1_thead1, #th2_thead, #th4_thead1, #th5_thead1, #th6_thead1 {
+    width: 100px;
+}
+
+
+#th3_thead1 {
+    width: 100px;
+}
+
+th, td {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+    border-top: 1px solid red;
+    border-right: 1px solid red;
+    text-align: center;
+}
+
+#thead1_table1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100px;
+}
+
+#tbody1_table1 {
+    text-align: center;
+    width: 100px;
+}
+
+#tfoot1_table1 {
+    text-align: center;
+}
+
+#button1_tbody1, #button2_tbody1, #button1_tbody4, #button2_tbody4, #button3_tbody4, #button4_tbody4, #button5_tbody4,#button1_tfoot1 {
+    width: 100px;
+    height: 35px;
+}
+#button6_tbody4,#button7_tbody4,#button8_tbody4,#button9_tbody4{
+    width: 100px;
+    height: 35px;
+}
+
+#button3_tfoot1, #button4_tfoot1, #button3_tfoot2 {
+    width: 200px;
+    height: 40px;
+}
+
+#input2_tfoot1, #input3_tfoot1 {
+    width: 100px;
+    text-align: center;
+}
+
+#input1_tbody2 {
+    width: 285px;
+    height: 30px;
+}
+
+#input2_tfoot2, #input3_tfoot2 {
+    width: 100px;
+    text-align: center;
+}
+
+#input1_tbody4 {
+    width: 200px;
+    height: 35px;
+}

@@ -12,6 +12,7 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 
 public class addEmpServlet extends HttpServlet {//添加
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req, resp);
