@@ -63,12 +63,16 @@ public class selectEmpServlet extends HttpServlet {//查询
                 req.getRequestDispatcher("/index.jsp").forward(req, resp);
             } else if (req.getParameter("inputLimit") != null) {
                 //指定页面
-                objectList = realizeEmpDao.Limit(Integer.parseInt(req.getParameter("inputLimit")), endLimit);
-                int oneLimit = Integer.parseInt(req.getParameter("inputLimit"));
-                req.setAttribute("oneLimit", oneLimit);
-                req.setAttribute("objectList", objectList);
-                req.setAttribute("bulkMaxRow", bulkMaxRow);
-                req.getRequestDispatcher("/index.jsp").forward(req, resp);
+                if (!"请输入页数".equals(req.getParameter("inputLimit"))) {
+                    objectList = realizeEmpDao.Limit(Integer.parseInt(req.getParameter("inputLimit")), endLimit);
+                    int oneLimit = Integer.parseInt(req.getParameter("inputLimit"));
+                    req.setAttribute("oneLimit", oneLimit);
+                    req.setAttribute("objectList", objectList);
+                    req.setAttribute("bulkMaxRow", bulkMaxRow);
+                    req.getRequestDispatcher("/index.jsp").forward(req, resp);
+                } else {
+                   printWriter.write("<script>alert('请输入跳转页数');location.href='/ning.ying/index.jsp';</script>");
+                }
             } else if (req.getParameter("login") != null && "登录".equals(req.getParameter("login"))) {
                 //登录
                 String userName = req.getParameter("userName");
@@ -95,6 +99,9 @@ public class selectEmpServlet extends HttpServlet {//查询
                 session.removeAttribute("userName");
                 session.invalidate();
                 resp.getWriter().write("<script>alert('退出成功');location.href='login.jsp';</script>");
+            } else {
+                //没有数据直接访问
+                resp.getWriter().write("<script>alert('无法访问');location.href='login.jsp';</script>");
             }
         } catch (Exception e) {
             e.printStackTrace();

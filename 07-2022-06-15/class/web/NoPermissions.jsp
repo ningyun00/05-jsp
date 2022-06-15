@@ -13,7 +13,7 @@
     <body>
         <%
             if (session.getAttribute("userName") == null) {
-                out.print("<script>alert('您没有权限访问，请先登录！');location.href='login.jsp'</script>");
+                out.print("<script>alert('您还没有登录，请先登录！');location.href='login.jsp'</script>");
             }
         %>
     </body>

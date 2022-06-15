@@ -16,7 +16,7 @@
         <script type = "text/javascript" src = "Jquery/jquery-1.12.4.js"></script>
         <script type = "text/javascript" src = "Jquery/index.js"></script>
         <%--防止未登录访问--%>
-        <script language = 'javascript'>
+        <script language = "JavaScript">
             history.go(1);
         </script>
     </head>

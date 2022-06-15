@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#div1_bottom, #div2_div1 {
+    margin: auto;
+    padding: 0;
+    width: 600px;
+}
+
+#table1_form1 {
+    margin: 0;
+    padding: 0;
+    width: 600px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#p1_th1 {
+    font-size: 50px;
+}
+
+tr, td, th {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+}
+
+#th1_tr2 {
+    height: 25px;
+}
+
+#td1_tr3, #td2_tr3, #td6_tr3 {
+    height: 30px;
+    width: 50px;
+}
+
+#td3_tr3, #td4_tr3 {
+    height: 30px;
+    width: 70px;
+}
+
+#tr1_tbody1 {
+    height: 45px;
+    width: 600px;
+}
+#input1_th1{
+    width: 100px;
+    height: 30px;
+}
+.button1{
+    width: 50px;
+    height: 30px;
+}
+/*隔行变色*/
+#tbody1_table1 tr:nth-child(2n-1){
+    background-color: aqua;
+}#tbody1_table1 tr:nth-child(2n){
+    background-color: cornflowerblue;
+}

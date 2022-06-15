@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#div1_bottom {
+    margin: auto;
+    padding: 0;
+    width: 450px;
+}
+
+#div2_div1 {
+    margin: auto;
+    padding: 0;
+    width: 450px;
+}
+#input1_td1,#input1_td2{
+    width: 100px;
+    height: 25px;
+}

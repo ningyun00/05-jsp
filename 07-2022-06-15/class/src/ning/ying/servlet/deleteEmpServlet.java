@@ -25,22 +25,31 @@ public class deleteEmpServlet extends HttpServlet {//删除
         resp.setContentType("text/html;charset=utf-8");
         PrintWriter printWriter = resp.getWriter();
         RealizeEmpDao realizeEmpDao = new RealizeEmpDao();
-        if (req.getParameter("delete1_tbody1") != null) {//单条删除
-            int EID = Integer.parseInt(req.getParameter("delete1_tbody1"));
-            if (realizeEmpDao.delete(EID) > 0) {
-                printWriter.write("<script>alert('删除成功');location.href='/ning.ying/index.jsp';</script>");
+        try {
+            if (req.getParameter("delete1_tbody1") != null || req.getParameterValues("hobby") != null) {
+                if (req.getParameter("delete1_tbody1") != null) {//单条删除
+                    int EID = Integer.parseInt(req.getParameter("delete1_tbody1"));
+                    if (realizeEmpDao.delete(EID) > 0) {
+                        printWriter.write("<script>alert('删除成功');location.href='/ning.ying/index.jsp';</script>");
+                    } else {
+                        printWriter.write("<script>alert('删除失败');location.href='/ning.ying/index.jsp';</script>");
+                    }
+                }
+                if (req.getParameterValues("hobby") != null) {//批量删除
+                    if (realizeEmpDao.bulkDelete(req.getParameterValues("hobby"))) {
+                        printWriter.write("<script>alert('批量删除成功');location.href='/ning.ying/index.jsp';</script>");
+                    } else {
+                        printWriter.write("<script>alert('批量删除失败');location.href='/ning.ying/index.jsp';</script>");
+                    }
+                } else {
+                    printWriter.write("<script>alert('请选择删除对象');location.href='/ning.ying/index.jsp';</script>");
+                }
             } else {
-                printWriter.write("<script>alert('删除失败');location.href='/ning.ying/index.jsp';</script>");
+                //没有数据直接访问
+                resp.getWriter().write("<script>alert('无法访问');location.href='login.jsp';</script>");
             }
-        }
-        if (req.getParameterValues("hobby") != null) {//批量删除
-            if (realizeEmpDao.bulkDelete(req.getParameterValues("hobby"))) {
-                printWriter.write("<script>alert('批量删除成功');location.href='/ning.ying/index.jsp';</script>");
-            } else {
-                printWriter.write("<script>alert('批量删除失败');location.href='/ning.ying/index.jsp';</script>");
-            }
-        } else {
-            printWriter.write("<script>alert('请选择删除对象');location.href='/ning.ying/index.jsp';</script>");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

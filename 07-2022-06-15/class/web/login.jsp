@@ -27,6 +27,7 @@
                             </tr>
                         </thead>
                         <tbody id = "tbody1_table1">
+                            <%--用户名--%>
                             <tr>
                                 <td>
                                     <p id = "p2_table1">用户名：</p>
@@ -37,6 +38,7 @@
                                     </label>
                                 </td>
                             </tr>
+                            <%--密码--%>
                             <tr>
                                 <td><p id = "p3_table1">密&nbsp;&nbsp;&nbsp;码：</p></td>
                                 <td>

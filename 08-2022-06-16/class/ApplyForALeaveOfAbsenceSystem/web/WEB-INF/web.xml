@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet><!--注册-->
+        <servlet-name>selectFurloughApplyServlet</servlet-name><!--注册名-->
+        <servlet-class>ning.ying.servlet.selectFurloughApplyServlet</servlet-class><!--注册位置-->
+    </servlet>
+    <servlet-mapping><!--挂牌-->
+        <servlet-name>selectFurloughApplyServlet</servlet-name><!--登记名-->
+        <url-pattern>/selectFurloughApplyServlet</url-pattern><!--浏览器访问方式-->
+    </servlet-mapping>
+    <servlet><!--注册-->
+        <servlet-name>addFurloughApplyServlet</servlet-name><!--注册名-->
+        <servlet-class>ning.ying.servlet.addFurloughApplyServlet</servlet-class><!--注册位置-->
+    </servlet>
+    <servlet-mapping><!--挂牌-->
+        <servlet-name>addFurloughApplyServlet</servlet-name><!--登记名-->
+        <url-pattern>/addFurloughApplyServlet</url-pattern><!--浏览器访问方式-->
+    </servlet-mapping>
+</web-app>

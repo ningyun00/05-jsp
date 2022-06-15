@@ -17,7 +17,7 @@ import java.text.SimpleDateFormat;
 public class updateEmpServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        doPost(req, resp);
     }
 
     @Override
@@ -26,18 +26,25 @@ public class updateEmpServlet extends HttpServlet {
         resp.setContentType("text/html;charset=utf-8");
         PrintWriter printWriter = resp.getWriter();
         try {
-            int EID = Integer.parseInt(req.getParameter("EID"));
-            String EName = req.getParameter("EName");
-            String ESex = req.getParameter("ESex");
-            String ETelephone = req.getParameter("ETelephone");
-            String EHireDate = req.getParameter("EHireDate");
-            System.out.println(req.getParameter("EHireDate"));
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-            RealizeEmpDao realizeEmpDao = new RealizeEmpDao();
-            if (realizeEmpDao.update(new Emp(EID, EName, ESex, ETelephone, simpleDateFormat.parse(EHireDate))) > 0) {
-                printWriter.write("<script>alert('修改成功');location.href='/ning.ying/index.jsp';</script>");
+            if (req.getParameter("EID") != null && req.getParameter("EName") != null
+                    && req.getParameter("ESex") != null && req.getParameter("ETelephone") != null
+                    && req.getParameter("EHireDate") != null) {
+                int EID = Integer.parseInt(req.getParameter("EID"));
+                String EName = req.getParameter("EName");
+                String ESex = req.getParameter("ESex");
+                String ETelephone = req.getParameter("ETelephone");
+                String EHireDate = req.getParameter("EHireDate");
+                System.out.println(req.getParameter("EHireDate"));
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                RealizeEmpDao realizeEmpDao = new RealizeEmpDao();
+                if (realizeEmpDao.update(new Emp(EID, EName, ESex, ETelephone, simpleDateFormat.parse(EHireDate))) > 0) {
+                    printWriter.write("<script>alert('修改成功');location.href='/ning.ying/index.jsp';</script>");
+                } else {
+                    printWriter.write("<script>alert('修改失败');location.href='/ning.ying/index.jsp';</script>");
+                }
             } else {
-                printWriter.write("<script>alert('修改失败');location.href='/ning.ying/index.jsp';</script>");
+                //没有数据直接访问
+                resp.getWriter().write("<script>alert('无法访问');location.href='login.jsp';</script>");
             }
         } catch (Exception e) {
             e.printStackTrace();
