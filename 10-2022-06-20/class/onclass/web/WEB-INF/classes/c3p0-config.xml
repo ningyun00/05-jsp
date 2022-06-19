@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<c3p0-config>
+    <default-config>
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/class?characterEncoding=utf-8</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
+        <!-- 可选配置（初始化连接数量） -->
+        <property name="initialPoolSize">5</property>
+    </default-config>
+</c3p0-config>
