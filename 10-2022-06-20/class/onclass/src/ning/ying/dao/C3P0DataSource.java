@@ -10,14 +10,14 @@ import java.sql.Statement;
 public class C3P0DataSource {
     private static ComboPooledDataSource dataSource = new ComboPooledDataSource();
     static {
-/*        try {
+        try {
             dataSource.setDriverClass("com.mysql.cj.jdbc.Driver");
             dataSource.setJdbcUrl("jdbc:mysql://127.0.0.1:3306/class?characterEncoding=utf-8");
             dataSource.setUser("root");
             dataSource.setPassword("root");
         } catch (PropertyVetoException e) {
             e.printStackTrace();
-        }*/
+        }
     }
 
     /**

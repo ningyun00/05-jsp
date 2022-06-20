@@ -25,6 +25,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -49,18 +57,18 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="D:/0-3-学习/S2/05-jsp/35.数据库的连接池/WebDemo10.IDEA" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Facet" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\S2\05-jsp\10-2022-06-20\class\onclass\web\WEB-INF\lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StudentdbcpDataSourceTest">
+  <component name="RunManager" selected="Application.StudentC3P0DataSourceTest">
     <configuration name="StudentC3P0DataSourceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ning.ying.test.StudentC3P0DataSourceTest" />
       <module name="onclass" />
@@ -124,17 +132,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -227,22 +224,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.StudentDaoTest" />
-      <item itemvalue="Tomcat Server.Tomcat 7.0.52" />
-      <item itemvalue="Application.StudentDataSourceTest" />
-      <item itemvalue="Application.StudentConnectionWrapTest" />
       <item itemvalue="Application.StudentC3P0DataSourceTest" />
+      <item itemvalue="Application.StudentConnectionWrapTest" />
+      <item itemvalue="Application.StudentDaoTest" />
+      <item itemvalue="Application.StudentDataSourceTest" />
       <item itemvalue="Application.StudentdbcpDataSourceTest" />
+      <item itemvalue="Tomcat Server.Tomcat 7.0.52" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.StudentdbcpDataSourceTest" />
-        <item itemvalue="Application.StudentC3P0DataSourceTest" />
-        <item itemvalue="Application.StudentConnectionWrapTest" />
-        <item itemvalue="Application.StudentDataSourceTest" />
-        <item itemvalue="Application.StudentDaoTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -252,11 +240,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655693145539</updated>
-      <workItem from="1655693147491" duration="8472000" />
+      <workItem from="1655693147491" duration="10303000" />
+      <workItem from="1655716349487" duration="11694000" />
+      <workItem from="1655737592510" duration="330000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
