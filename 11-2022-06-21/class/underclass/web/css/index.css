@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#div1_bottom, #div2_div1 {
+    margin: auto;
+    padding: 0;
+    width: 456px;
+}
+
+#table1_div1 {
+    margin: 0;
+    padding: 0;
+    width: 450px;
+    text-align: center;
+    border-collapse: collapse;
+}
+tr,th,td{
+    margin: 0;
+    padding: 0;
+    border-top: 1px red solid;
+    border-bottom: 1px red solid;
+    border-left: 1px red solid;
+    border-right: 1px red solid;
+}
+#td1_UName, #td1_UPassword {
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    text-align: right;
+    height: 30px;
+}
+#td2_UName,#td2_UPassword{
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    text-align: left;
+}
+#td3_UName {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}

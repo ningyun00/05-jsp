@@ -2,29 +2,18 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="onclass:war exploded" />
+      <artifact name="onclass:Web exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36ae3e36-4ee1-49d8-a69b-1ee324d34424" name="Default Changelist" comment="" />
+    <list default="true" id="26196d09-a4ee-4ae6-84d3-e0f1eb890176" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="BaseDao" />
-        <option value="xml" />
-        <option value="Jsp File" />
-        <option value="Class" />
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -33,7 +22,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectId" id="2As3LTwCv2EXNVkJciAKyBPpsda" />
+  <component name="ProjectId" id="2At6o61iOOKGmm3Xvz0RUSDHGH6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -48,40 +37,44 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/onclass" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/ning/ying/dao" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.18169014" />
-    <property name="project.structure.side.proportion" value="0.3" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="project.structure.side.proportion" value="0.2051282" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ning.ying.servlet" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\S2\05-jsp\11-2022-06-21\class\onclass\src" />
-      <recent name="E:\S2\05-jsp\11-2022-06-21\class\onclass\web\js" />
-      <recent name="E:\S2\05-jsp\11-2022-06-21\class\onclass\web\WEB-INF\lib" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\S2\05-jsp\11-2022-06-21\class\onclass\web\WEB-INF\lib\tomcat" />
+      <recent name="E:\S2\05-jsp\11-2022-06-21\class\onclass\src\ning\ying\dao" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 7.0.52" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.52" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/ning.ying/" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
-        <artifact name="onclass:war exploded">
+        <artifact name="onclass:Web exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/ning.ying" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="3ad19598-86f6-48fd-b219-19644bb97b7d" />
+        <option name="BASE_DIRECTORY_NAME" value="ee671aa9-b3d4-4c63-a9e8-4d1233fe60d5" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -89,7 +82,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51817" />
+        <option name="DEBUG_PORT" value="54499" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -154,7 +147,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="onclass:war exploded" />
+          <artifact name="onclass:Web exploded" />
         </option>
       </method>
     </configuration>
@@ -162,20 +155,20 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="36ae3e36-4ee1-49d8-a69b-1ee324d34424" name="Default Changelist" comment="" />
-      <created>1655784410125</created>
+      <changelist id="26196d09-a4ee-4ae6-84d3-e0f1eb890176" name="Default Changelist" comment="" />
+      <created>1655816705630</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1655784410125</updated>
-      <workItem from="1655784412140" duration="18797000" />
-      <workItem from="1655814293857" duration="1183000" />
-      <workItem from="1655815541359" duration="63000" />
-      <workItem from="1655815710328" duration="897000" />
-      <workItem from="1655816671294" duration="33000" />
+      <updated>1655816705630</updated>
+      <workItem from="1655816707099" duration="589000" />
+      <workItem from="1655818481925" duration="7228000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/onclass$Tomcat_7_0_52.ic" NAME="Tomcat 7.0.52 Coverage Results" MODIFIED="1655817174265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

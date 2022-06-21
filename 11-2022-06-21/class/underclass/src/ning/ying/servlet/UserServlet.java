@@ -1,8 +1,6 @@
 package ning.ying.servlet;
 
-import com.google.gson.Gson;
-import ning.ying.dao.ProvinceDao;
-import ning.ying.entity.Province;
+import ning.ying.dao.UserDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,9 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 
-public class ProvinceServlet extends HttpServlet {
+public class UserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req, resp);
@@ -24,12 +21,17 @@ public class ProvinceServlet extends HttpServlet {
         resp.setContentType("text/html;charset=utf-8");
         resp.setCharacterEncoding("utf-8");
         PrintWriter pipedWriter = resp.getWriter();
-        //查省份
-        List<Province> list = ProvinceDao.ProvinceList();
-        //list 转换成 json格式
-        Gson g = new Gson();
-        String json = g.toJson(list);
-        //响应
-        pipedWriter.print(json);
+        try {
+            if (req.getParameter("UName") != null) {
+                String UName = req.getParameter("UName");
+                if (UserDao.showUser(UName)) {
+                    pipedWriter.write("用户未被使用");
+                } else {
+                    pipedWriter.write("用户已被使用");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

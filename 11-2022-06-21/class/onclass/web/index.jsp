@@ -69,7 +69,8 @@
                         var options = "<option value=" + cid + ">" + cname + "</option>";
                         city.append(options);
                     }
-                });
+                }
+            );
         }
 
         var request = new XMLHttpRequest();

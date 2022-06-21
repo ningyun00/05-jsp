@@ -17,8 +17,6 @@
             List<Constellation> constellationArrayList = (List<Constellation>) request.getAttribute("constellationArrayList");
             int i = 0;
             for (Constellation constellation : constellationArrayList) {
-
-                System.out.println(constellation);
                 i++;
         %>
         <input type = "radio" name = "shier" class = "radio" onclick="show(this)" value = "<%=i%>"><%=constellation.getCName()%>
