@@ -222,19 +222,24 @@ SELECT * FROM eaby_user WHERE loginName='admin' AND PASSWORD='e10adc3949ba59abbe
 
 
 
-SELECT * FROM eaby_user WHERE loginName = 'admin' AND PASSWORD = '123456'
-SELECT * FROM `eaby_product` WHERE fileName = 'A9924F9DB68B4DF99FDBF05902075AF0.jpg';
+SELECT * FROM eaby_user WHERE loginName = 'admin' AND password = '123456'
+select * from `eaby_product` where fileName = 'A9924F9DB68B4DF99FDBF05902075AF0.jpg';
 
 
 
 
-INSERT  INTO `eaby_user`VALUES(NULL,'asdf','系统管理员','e10adc3949ba59abbe56e057f20f883e',1,NULL,'hello11@bdqn.com','1583233515',1);
+INSERT  INTO `eaby_user`VALUEs(null,'asdf','系统管理员','e10adc3949ba59abbe56e057f20f883e',1,null,'hello11@bdqn.com','1583233515',1);
 
-SELECT COUNT(loginName) FROM eaby_user WHERE loginName = 'admin'
-SELECT * FROM eaby_product WHERE categoryLevel3Id = 0 ORDER BY `fileName` DESC;
-SELECT * FROM eaby_product WHERE categoryLevel2Id =661;
+SELECT count(loginName) FROM eaby_user WHERE loginName = 'admin'
+SELECT * FROM eaby_product where categoryLevel3Id = 0 order by `fileName` desc;
+SELECT * FROM eaby_product WHERE categoryLevel3Id =0;
 
-SELECT * FROM eaby_product INNER JOIN eaby_product_category;
+SELECT * FROM eaby_product inner join eaby_product_category;
+select * from eaby_product_category where type  = 1;
+SELECT * FROM eaby_product_category WHERE TYPE  = 2;
+SELECT * FROM eaby_product_category WHERE TYPE  = 3;
+
+
 
 
 

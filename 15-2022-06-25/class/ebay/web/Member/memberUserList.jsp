@@ -1,4 +1,6 @@
-<%--
+<%@ page import = "com.ning.ying.dao.UserDao" %>
+<%@ page import = "java.util.List" %>
+<%@ page import = "com.ning.ying.entity.EabyUser" %><%--
   Created by IntelliJ IDEA.
   User: 寜
   Date: 2022-06-23
@@ -28,7 +30,8 @@
     </head>
     <body>
         <!--Begin Header Begin-->
-        <%@ include file = "soubg.jsp" %> <%--登录了的用户--%>
+        <%@ include file = "soubg.jsp" %>
+        <%--登录了的用户--%>
         <div class = "m_top_bg">
             <div class = "top">
                 <div class = "m_logo"><a href = "Index.html"><img src = "../images/logo.png"/></a></div>
@@ -114,39 +117,28 @@
                             <td width = "20%">类型</td>
                             <td width = "20%" colspan = "2">操作</td>
                         </tr>
-
+                        <%
+                            UserDao userDao = new UserDao();
+                            List<EabyUser> eabyUser = userDao.selectUser();
+                            for (EabyUser user : eabyUser) {
+                        %>
                         <tr>
                             <td><font color = "#ff4e00">admin</font></td>
-                            <td>系统管理员</td>
-                            <td>男</td>
-                            <td>系统管理员</td>
+                            <td><%=user.getUserName()%>
+                            </td>
+                            <td>
+                                <% if (user.getSex() == 1) {%>
+                                男
+                                <% } else {%>
+                                女
+                                <%}%>
+                            </td>
+                            <td><%=user.getLoginName()%>
+                            </td>
                             <td width = "145"><a href = "#">修改</a></td>
                             <td width = "145"><a href = "#">删除</a></td>
                         </tr>
-                        <tr>
-                            <td><font color = "#ff4e00">cgn</font></td>
-                            <td>程广宁</td>
-                            <td>女</td>
-                            <td>普通用户</td>
-                            <td width = "145"><a href = "#">修改</a></td>
-                            <td width = "145"><a href = "#">删除</a></td>
-                        </tr>
-                        <tr>
-                            <td><font color = "#ff4e00">ck</font></td>
-                            <td>陈康</td>
-                            <td>男</td>
-                            <td>普通用户</td>
-                            <td width = "145"><a href = "#">修改</a></td>
-                            <td width = "145"><a href = "#">删除</a></td>
-                        </tr>
-                        <tr>
-                            <td><font color = "#ff4e00">lgw</font></td>
-                            <td>李高伟</td>
-                            <td>男</td>
-                            <td>普通用户</td>
-                            <td width = "145"><a href = "#">修改</a></td>
-                            <td width = "145"><a href = "#">删除</a></td>
-                        </tr>
+                        <%}%>
                     </table>
 
 

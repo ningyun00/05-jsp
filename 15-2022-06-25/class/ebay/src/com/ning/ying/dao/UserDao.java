@@ -5,6 +5,8 @@ import com.ning.ying.entity.EabyUser;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 用户数据层
@@ -39,6 +41,33 @@ public class UserDao {
             BaseDao.close(resultSet, preparedStatement, connection);
         }
         return eabyUser;
+    }
+
+    /**
+     * 所以用戶
+     */
+    public List<EabyUser> selectUser() {
+        List<EabyUser> eabyUserList = new ArrayList<>();
+        try {
+            connection = BaseDao.getConnection();
+            preparedStatement = connection.prepareStatement("SELECT * FROM eaby_user");
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                EabyUser eabyUser = new EabyUser();
+                eabyUser.setId(resultSet.getInt("id"));
+                eabyUser.setLoginName(resultSet.getString("loginName"));
+                eabyUser.setPassword(resultSet.getString("password"));
+                eabyUser.setSex(resultSet.getInt("sex"));
+                eabyUser.setUserName(resultSet.getString("userName"));
+                eabyUser.setType(resultSet.getInt("type"));
+                eabyUserList.add(eabyUser);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            BaseDao.close(resultSet, preparedStatement, connection);
+        }
+        return eabyUserList;
     }
 
     public int registUser(EabyUser eabyUser) {

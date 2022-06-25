@@ -1,3 +1,4 @@
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: 寜
@@ -91,10 +92,10 @@
                 <span class = "fr"><span class = "fl">你好，
                     <c:choose>
                         <c:when test = "${sessionScope.eabyUser.userName==null}">
-                            <span>请&nbsp;<a href = "login.jsp">登录</a> |</span>&nbsp;
+                            <span>请&nbsp;<a href = "login.jsp">登录</a></span>
                         </c:when>
                         <c:otherwise>
-                            <span>${sessionScope.eabyUser.userName}&nbsp;|&nbsp;<a href = "LoginServlet?method=注销">注销</a></span>&nbsp;|
+                            <span>${sessionScope.eabyUser.userName}|&nbsp;<a href = "LoginServlet?method=注销">注销</a></span>&nbsp;|
                         </c:otherwise>
                     </c:choose>
                     <a href = "regist.jsp" style = "color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a href = "Member/memberOrder.jsp">我的订单</a>&nbsp;|</span>

@@ -15,8 +15,6 @@ function CloseDiv(show_div,bg_div)
 	document.getElementById(bg_div).style.display='none';
 };
 
-
-
 function ShowDiv_1(show_div,bg_div){
 	document.getElementById(show_div).style.display='block';
 	document.getElementById(bg_div).style.display='block' ;

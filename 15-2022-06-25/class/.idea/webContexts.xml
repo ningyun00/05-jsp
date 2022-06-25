@@ -5,6 +5,7 @@
       <map>
         <entry key="file://$PROJECT_DIR$/ebay/web/head.jsp" value="file://$PROJECT_DIR$/ebay/web" />
         <entry key="file://$PROJECT_DIR$/ebay/web/login.jsp" value="file://$PROJECT_DIR$/ebay/web" />
+        <entry key="file://$PROJECT_DIR$/ebay/web/product.jsp" value="file://$PROJECT_DIR$/ebay/web" />
       </map>
     </option>
   </component>
