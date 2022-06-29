@@ -105,6 +105,10 @@
                 <div class = "m_right">
                     <p></p>
                     <div class = "mem_tit">商品上架</div>
+                    <%--引入jquery--%>
+                    <script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+                    <%--引入添加的jquery--%>
+                    <script type="text/javascript" src="../js/member/memberProductAdd.js"></script>
                     <form action = "" method = "post">
                         <table border = "0" class = "order_tab" style = "width:930px; text-align:center; margin-bottom:30px;" cellspacing = "0" cellpadding = "0">
                             <tbody>
@@ -116,7 +120,6 @@
                                         </select>
                                     </td>
                                 </tr>
-
                                 <tr>
                                     <td width = "20%" align = "right">二级分类</td>
                                     <td width = "80%" align = "left">
@@ -141,7 +144,6 @@
                                         <input name = "name" id = "name"/>
                                     </td>
                                 </tr>
-
 
                                 <tr>
                                     <td width = "20%" align = "right">商品图片</td>

@@ -164,7 +164,7 @@
                     	<div class = "s_city_t"></div>
                         <div class = "ss_list_c">
                         	<ul>
-                            	<li><a href = "/ning.ying/Member/member.jsp">后台</a></li>
+                            	<li><a href = "MemberServlet?method=member">后台</a></li>
                                 <li><a href = "regist.jsp">注册新账号</a></li>
                             </ul>
                         </div>

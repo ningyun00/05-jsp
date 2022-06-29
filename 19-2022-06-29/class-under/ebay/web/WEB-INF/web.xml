@@ -3,17 +3,24 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <!--默认加载-->
     <welcome-file-list>
         <welcome-file>IndexServlet</welcome-file>
     </welcome-file-list>
+
+    <!--编码格式-->
     <filter><!--过滤器-->
         <filter-name>EncodingFilter</filter-name><!--注册名-->
         <filter-class>com.ning.ying.filter.EncodingFilter</filter-class><!--注册地址-->
     </filter>
     <filter-mapping><!--挂牌/映射-->
         <filter-name>EncodingFilter</filter-name><!--登记名-->
-        <url-pattern>/*</url-pattern><!--给那些类型用-->
+        <url-pattern>*</url-pattern><!--给那些类型用-->
     </filter-mapping>
+
+
+
+    <!---->
     <filter><!--过滤器-->
         <filter-name>MemberFilter</filter-name><!--注册名-->
         <filter-class>com.ning.ying.filter.MemberFilter</filter-class><!--注册地址-->

@@ -1,6 +1,7 @@
 package com.ning.ying.filter;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.util.Enumeration;
 /**
  * 编码
  */
+@WebFilter(urlPatterns = "/*")
 public class EncodingFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -21,7 +23,9 @@ public class EncodingFilter implements Filter {
         System.out.println("EncodingFilter (编码) doFilter (服务)");
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
+        request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
+        response.setCharacterEncoding("utf-8");
         if ("POST".equals(request.getMethod())) {
             request.setCharacterEncoding("utf-8");
         } else {
