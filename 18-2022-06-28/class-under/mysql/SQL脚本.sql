@@ -252,3 +252,8 @@ SELECT id FROM eaby_news WHERE id = 531
 SELECT MAX(id) FROM eaby_order
 
 SELECT * FROM eaby_user_address WHERE userid = 2 ORDER BY isDefault DESC
+SELECT * FROM eaby_product_category WHERE TYPE = 1;
+SELECT * FROM eaby_product_category WHERE TYPE = 2;
+SELECT * FROM eaby_product_category WHERE TYPE = 3;
+INSERT INTO Eaby_Product VALUES(NULL,'测试1','1',1,1,1,548,654,655,'测试1',0,0,0);
+INSERT INTO Eaby_Product VALUES(NULL,'测试2','订单',152,94,548,654,655,'27A1789ED5764D82A5506DF3DC3933F9.jpg',0,0,0);
