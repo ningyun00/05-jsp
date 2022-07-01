@@ -50,7 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/JS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -84,6 +84,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 7.0.52" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.52" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/ning.ying/" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
@@ -95,6 +96,8 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="9cefff29-2ae6-4fe1-9bc3-8b78c7084d9a" />
+        <option name="HTTP_PORT" value="8081" />
+        <option name="JNDI_PORT" value="2099" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -171,6 +174,10 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Tomcat Server.Tomcat 7.0.52" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Test" />
@@ -193,6 +200,11 @@
       <workItem from="1655192557405" duration="25684000" />
       <workItem from="1655221282445" duration="3611000" />
       <workItem from="1655254681291" duration="2096000" />
+      <workItem from="1656690878165" duration="3325000" />
+      <workItem from="1656741915999" duration="79000" />
+      <workItem from="1656742055340" duration="4382000" />
+      <workItem from="1656758971688" duration="69000" />
+      <workItem from="1656759093780" duration="1190000" />
     </task>
     <servers />
   </component>
