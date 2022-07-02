@@ -49,33 +49,6 @@ public class UserDao {
     /**
      * 查询所有用户用戶
      */
-    public List<EabyUser> selectUser() {
-        List<EabyUser> eabyUserList = new ArrayList<>();
-        try {
-            connection = BaseDao.getConnection();
-            preparedStatement = connection.prepareStatement("SELECT * FROM eaby_user");
-            resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                EabyUser eabyUser = new EabyUser();
-                eabyUser.setId(resultSet.getInt("id"));
-                eabyUser.setLoginName(resultSet.getString("loginName"));
-                eabyUser.setPassword(resultSet.getString("password"));
-                eabyUser.setSex(resultSet.getInt("sex"));
-                eabyUser.setUserName(resultSet.getString("userName"));
-                eabyUser.setType(resultSet.getInt("type"));
-                eabyUserList.add(eabyUser);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            BaseDao.close(resultSet, preparedStatement, connection);
-        }
-        return eabyUserList;
-    }
-
-    /**
-     * 查询所有用户用戶
-     */
     public List<EabyUser> selectUser(int startLimit, int endLimit) {
         List<EabyUser> eabyUserList = new ArrayList<>();
         try {

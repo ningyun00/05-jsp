@@ -73,8 +73,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../06-2022-06-14/class" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.18169014" />
     <property name="project.structure.side.proportion" value="0.2051282" />
     <property name="settings.editor.selected.configurable" value="Errors" />
@@ -103,6 +103,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -250,6 +261,8 @@
       <workItem from="1656758985198" duration="57000" />
       <workItem from="1656759101018" duration="2242000" />
       <workItem from="1656770899303" duration="441000" />
+      <workItem from="1656771516576" duration="483000" />
+      <workItem from="1656773316898" duration="15410000" />
     </task>
     <servers />
   </component>

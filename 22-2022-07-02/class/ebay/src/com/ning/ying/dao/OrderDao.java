@@ -57,18 +57,19 @@ public class OrderDao {
         }
         return id;
     }
-
     /**
-     * 获取指定用户的订单
+     * 分页查询
      */
-    public List<EabyOrder> getUserOrder(int ID) {
+    public List<EabyOrder> getUserOrder(int id, int startLimit, int endLimit) {
         List<EabyOrder> eabyOrderArrayList = new ArrayList<>();
         try {
             connection = BaseDao.getConnection();
-            preparedStatement = connection.prepareStatement("SELECT * FROM `eaby_order` WHERE userId = ? ORDER BY createTime DESC");
-            preparedStatement.setInt(1,ID);
+            preparedStatement = connection.prepareStatement("SELECT * FROM `eaby_order` WHERE userId = ? ORDER BY createTime DESC LIMIT ?,?");
+            preparedStatement.setInt(1, id);
+            preparedStatement.setInt(2, (startLimit - 1) * endLimit);
+            preparedStatement.setInt(3, endLimit);
             resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 EabyOrder eabyOrder = new EabyOrder();
                 eabyOrder.setId(resultSet.getInt("id"));
                 eabyOrder.setUserId(resultSet.getInt("userId"));
@@ -83,10 +84,11 @@ public class OrderDao {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-         BaseDao.close(resultSet,preparedStatement,connection);
+            BaseDao.close(resultSet, preparedStatement, connection);
         }
         return eabyOrderArrayList;
     }
+
     /**
      * 获取指定用户的订单
      */
@@ -96,7 +98,7 @@ public class OrderDao {
             connection = BaseDao.getConnection();
             preparedStatement = connection.prepareStatement("SELECT * FROM `eaby_order`ORDER BY createTime DESC");
             resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 EabyOrder eabyOrder = new EabyOrder();
                 eabyOrder.setId(resultSet.getInt("id"));
                 eabyOrder.setUserId(resultSet.getInt("userId"));
@@ -111,8 +113,76 @@ public class OrderDao {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-         BaseDao.close(resultSet,preparedStatement,connection);
+            BaseDao.close(resultSet, preparedStatement, connection);
         }
         return eabyOrderArrayList;
+    }/**
+     * 获取指定用户的订单
+     */
+    public List<EabyOrder> getUserOrder(int startLimit,int endLimit) {
+        List<EabyOrder> eabyOrderArrayList = new ArrayList<>();
+        try {
+            connection = BaseDao.getConnection();
+            preparedStatement = connection.prepareStatement("SELECT * FROM `eaby_order`ORDER BY createTime DESC LIMIT ?,?");
+            preparedStatement.setInt(1,(startLimit-1)*endLimit);
+            preparedStatement.setInt(2,endLimit);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                EabyOrder eabyOrder = new EabyOrder();
+                eabyOrder.setId(resultSet.getInt("id"));
+                eabyOrder.setUserId(resultSet.getInt("userId"));
+                eabyOrder.setLoginName(resultSet.getString("loginName"));
+                eabyOrder.setUserAddress(resultSet.getString("userAddress"));
+                eabyOrder.setCreateTime(resultSet.getTimestamp("createTime"));
+                eabyOrder.setCost(resultSet.getDouble("cost"));
+                eabyOrder.setStatus(resultSet.getInt("status"));
+                eabyOrder.setSerialNumber(resultSet.getString("serialNumber"));
+                eabyOrderArrayList.add(eabyOrder);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            BaseDao.close(resultSet, preparedStatement, connection);
+        }
+        return eabyOrderArrayList;
+    }
+    /**
+     * 单个用户最大行数
+     */
+    public int maxRow(int id) {
+        int count = 0;
+        try {
+            connection = BaseDao.getConnection();
+            preparedStatement = connection.prepareStatement("SELECT COUNT(*) FROM `eaby_order` WHERE userId = ?");
+            preparedStatement.setInt(1,id);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                count = resultSet.getInt(1);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            BaseDao.close(resultSet, preparedStatement, connection);
+        }
+        return count;
+    }
+    /**
+     * 所有最大行数
+     */
+    public int maxRow() {
+        int count = 0;
+        try {
+            connection = BaseDao.getConnection();
+            preparedStatement = connection.prepareStatement("SELECT COUNT(*) FROM `eaby_order`");
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                count = resultSet.getInt(1);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            BaseDao.close(resultSet, preparedStatement, connection);
+        }
+        return count;
     }
 }

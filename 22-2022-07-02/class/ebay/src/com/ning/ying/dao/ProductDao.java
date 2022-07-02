@@ -82,13 +82,15 @@ public class ProductDao {
         return eabyProductArrayList;
     }
 
-    /** 一级分类商品 */
-    public List<EabyProduct> queryByCategoryLevel1Id(int clId){
+    /**
+     * 一级分类商品
+     */
+    public List<EabyProduct> queryByCategoryLevel1Id(int clId) {
         List<EabyProduct> eabyProductArrayList = new ArrayList<>();
         try {
             connection = BaseDao.getConnection();
             preparedStatement = connection.prepareStatement("SELECT * FROM eaby_product WHERE categoryLevel1Id =?");
-            preparedStatement.setInt(1,clId);
+            preparedStatement.setInt(1, clId);
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 EabyProduct product = new EabyProduct();
@@ -113,6 +115,7 @@ public class ProductDao {
         }
         return eabyProductArrayList;
     }
+
     /**
      * 一级菜单
      */
@@ -121,7 +124,7 @@ public class ProductDao {
         try {
             connection = BaseDao.getConnection();
             preparedStatement = connection.prepareStatement("SELECT * FROM eaby_product_category WHERE TYPE  = ?");
-            preparedStatement.setInt(1,Id);
+            preparedStatement.setInt(1, Id);
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 EabyProductCategory eabyProductCategory = new EabyProductCategory();
@@ -138,6 +141,7 @@ public class ProductDao {
         }
         return eabyProductArrayList;
     }
+
     /**
      * 新闻
      */
@@ -166,18 +170,19 @@ public class ProductDao {
 
     /**
      * 根据商品分类,查询商品信息
-     * @param level:分类级别  id:分类id size:查询行数
+     *
+     * @param level:分类级别 id:分类id size:查询行数
      * @return
      */
-    public List<EabyProduct> queryByCategory1Id(int level, int id, int page, int size){
+    public List<EabyProduct> queryByCategory1Id(int level, int id, int page, int size) {
         List<EabyProduct> list = new ArrayList<EabyProduct>();
-        connection= BaseDao.getConnection();
+        connection = BaseDao.getConnection();
         StringBuffer sql = new StringBuffer(" select * from eaby_product where ");
-        if(level==1){
+        if (level == 1) {
             sql.append(" categoryLevel1Id");
-        }else if(level==2){
+        } else if (level == 2) {
             sql.append(" categoryLevel2Id");
-        }else if(level==3){
+        } else if (level == 3) {
             sql.append(" categoryLevel3Id");
         }
         //0,20    20,20   40,20  60,20
@@ -186,10 +191,10 @@ public class ProductDao {
             preparedStatement = connection.prepareStatement(sql.toString());
             preparedStatement.setInt(1, id);
             // ((当前页-1)*size)
-            preparedStatement.setInt(2, ((page-1)*size));
+            preparedStatement.setInt(2, ((page - 1) * size));
             preparedStatement.setInt(3, size);
             resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 EabyProduct pt = new EabyProduct();
                 pt.setId(resultSet.getInt("id"));
                 pt.setName(resultSet.getString("name"));
@@ -207,14 +212,16 @@ public class ProductDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally{
+        } finally {
             BaseDao.close(resultSet, preparedStatement, connection);
         }
         return list;
     }
 
-    /** 查询单个商品 */
-    public EabyProduct queryById(int id){
+    /**
+     * 查询单个商品
+     */
+    public EabyProduct queryById(int id) {
         EabyProduct pt = new EabyProduct();
         connection = BaseDao.getConnection();
         StringBuffer sql = new StringBuffer(" select * from eaby_product where id=?");
@@ -222,7 +229,7 @@ public class ProductDao {
             preparedStatement = connection.prepareStatement(sql.toString());
             preparedStatement.setInt(1, id);
             resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 pt.setId(resultSet.getInt("id"));
                 pt.setName(resultSet.getString("name"));
                 pt.setDescription(resultSet.getString("description"));
@@ -238,21 +245,23 @@ public class ProductDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally{
+        } finally {
             BaseDao.close(resultSet, preparedStatement, connection);
         }
         return pt;
     }
 
-    /** 根据编号查询浏览记录 */
-    public List<EabyProduct> queryHistory(String pid){
+    /**
+     * 根据编号查询浏览记录
+     */
+    public List<EabyProduct> queryHistory(String pid) {
         List<EabyProduct> list = new ArrayList<EabyProduct>();
-       connection = BaseDao.getConnection();
-        String sql =" select * from eaby_product where id in("+pid+")";
+        connection = BaseDao.getConnection();
+        String sql = " select * from eaby_product where id in(" + pid + ")";
         try {
             preparedStatement = connection.prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 EabyProduct pt = new EabyProduct();
                 pt.setId(resultSet.getInt("id"));
                 pt.setName(resultSet.getString("name"));
@@ -268,20 +277,23 @@ public class ProductDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally{
+        } finally {
             BaseDao.close(resultSet, preparedStatement, connection);
         }
         return list;
     }
-    /** 添加商品 */
-    public int add(EabyProduct ep){
+
+    /**
+     * 添加商品
+     */
+    public int add(EabyProduct ep) {
         //1.返回值的初始化
-        int row=0;
+        int row = 0;
         try {
             //2.创建链接对象
-            connection= BaseDao.getConnection();
+            connection = BaseDao.getConnection();
             //3.准备sql语句
-            String sql="insert into Eaby_Product values(null,?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?,?)";
+            String sql = "insert into Eaby_Product values(null,?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?,?)";
             //声明在try外面是为了方便关闭
             //4.创建命令对象
             preparedStatement = connection.prepareStatement(sql);
@@ -290,29 +302,34 @@ public class ProductDao {
             preparedStatement.setString(2, ep.getDescription());
             preparedStatement.setDouble(3, ep.getPrice());
             preparedStatement.setInt(4, ep.getStock());
-            preparedStatement.setInt(5,ep.getCategoryLevel1Id());
-            preparedStatement.setInt(6,ep.getCategoryLevel2Id() );
-            preparedStatement.setInt(7,ep.getCategoryLevel3Id() );
+            preparedStatement.setInt(5, ep.getCategoryLevel1Id());
+            preparedStatement.setInt(6, ep.getCategoryLevel2Id());
+            preparedStatement.setInt(7, ep.getCategoryLevel3Id());
             preparedStatement.setString(8, ep.getFileName());
             preparedStatement.setInt(9, ep.getIsHot());
             preparedStatement.setInt(10, ep.getIsSale());
             preparedStatement.setString(11, ep.getDetailed());
             //5.执行
-            row=preparedStatement.executeUpdate();
+            row = preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally{
+        } finally {
             BaseDao.close(resultSet, preparedStatement, connection);
         }
         //返回集合
         return row;
     }
-    /** 查询所有商品 */
-    public List<EabyProduct> selectAll(){
+
+    /**
+     * 查询所有商品分页
+     */
+    public List<EabyProduct> selectAll(int startLimit, int endLimit) {
         List<EabyProduct> eabyProductArrayList = new ArrayList<>();
         try {
             connection = BaseDao.getConnection();
-            preparedStatement = connection.prepareStatement("SELECT * FROM eaby_product");
+            preparedStatement = connection.prepareStatement("SELECT * FROM eaby_product ORDER BY id DESC LIMIT ?,?");
+            preparedStatement.setInt(1, (startLimit - 1) * endLimit);
+            preparedStatement.setInt(2, endLimit);
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 EabyProduct product = new EabyProduct();
@@ -336,5 +353,37 @@ public class ProductDao {
             BaseDao.close(resultSet, preparedStatement, connection);
         }
         return eabyProductArrayList;
+    }
+
+    /**
+     * 所有最大行数
+     */
+    public int maxRow() {
+        int count = 0;
+        try {
+            connection = BaseDao.getConnection();
+            preparedStatement = connection.prepareStatement("SELECT COUNT(*) FROM `eaby_product`");
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                count = resultSet.getInt(1);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            BaseDao.close(resultSet, preparedStatement, connection);
+        }
+        return count;
+    }
+
+    public List<EabyProductCategory> getCategoryList() {
+        List<EabyProductCategory> categoryList = new ArrayList<>();
+        try {
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            BaseDao.close(resultSet, preparedStatement, connection);
+        }
+        return categoryList;
     }
 }
