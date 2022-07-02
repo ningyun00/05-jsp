@@ -113,9 +113,4 @@ public class MemberServlet extends HttpServlet {
         session.setAttribute("eventualUserList", eventualUserList);//最终页数
         session.setAttribute("onePageUserList", 1);//改变起始页数
     }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
 }
