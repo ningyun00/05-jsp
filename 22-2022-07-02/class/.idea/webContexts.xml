@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/ebay/web/Member/memberNewList.jsp" value="file://$PROJECT_DIR$/ebay/web/Member" />
+        <entry key="file://$PROJECT_DIR$/ebay/web/Member/memberProductAdd.jsp" value="file://$PROJECT_DIR$/ebay/web/Member" />
+        <entry key="file://$PROJECT_DIR$/ebay/web/Member/memberUserList.jsp" value="file://$PROJECT_DIR$/ebay/web/Member" />
+        <entry key="file://$PROJECT_DIR$/ebay/web/buyCarTwo.jsp" value="file://$PROJECT_DIR$/ebay/web" />
+        <entry key="file://$PROJECT_DIR$/ebay/web/head.jsp" value="file://$PROJECT_DIR$/ebay/web" />
+        <entry key="file://$PROJECT_DIR$/ebay/web/login.jsp" value="file://$PROJECT_DIR$/ebay/web" />
+        <entry key="file://$PROJECT_DIR$/ebay/web/product.jsp" value="file://$PROJECT_DIR$/ebay/web" />
+      </map>
+    </option>
+  </component>
+</project>
