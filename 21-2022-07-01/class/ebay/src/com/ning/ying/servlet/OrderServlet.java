@@ -128,6 +128,6 @@ public class OrderServlet extends HttpServlet {
         for (int i = 0; i < strChar.length; i++) {
             result += Integer.toOctalString(strChar[i]);
         }
-        return result;
+       return result;
     }
 }

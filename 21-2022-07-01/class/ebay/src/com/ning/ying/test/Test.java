@@ -21,5 +21,6 @@ public class Test {
             System.out.print(eabyOrder.getSerialNumber());
             System.out.println();
         }
+        System.out.println(result);
     }
 }

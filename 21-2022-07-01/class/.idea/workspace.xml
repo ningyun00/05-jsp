@@ -18,6 +18,8 @@
         <option value="package-info" />
         <option value="BaseDao" />
         <option value="xml" />
+        <option value="Class" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Jsp File" />
         <option value="Class" />
@@ -84,6 +86,8 @@
       <recent name="E:\S2\05-jsp\20-2022-06-30\class\ebay\web\Member" />
       <recent name="E:\S2\05-jsp\17-2022-06-27\class\ebay\web\WEB-INF\lib" />
       <recent name="E:\S2\05-jsp\17-2022-06-27\class\ebay\web\js" />
+      <recent name="E:\S2\05-jsp\15-2022-06-25\class\ebay\web" />
+      <recent name="E:\S2\05-jsp\15-2022-06-25\class\ebay\web\WEB-INF\lib" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.ning.ying.dao" />

@@ -47,15 +47,15 @@ $(function () {
 });
 var editor;
 $(function (){
-    //js加载事件中加载富文本域资源
-    //加载wangEditor
-    var E = window.wangEditor;
-    //div内创建wangEditor对象
+//js加载事件中加载富文本域资源
+//加载wangEditor
+var E = window.wangEditor;
+//div内创建wangEditor对象
     editor = new E('#editor');
-    //该代码表以Base64格式保存图片
+//该代码表以Base64格式保存图片
     editor.customConfig.uploadImgShowBase64 = true;
-    //开始构造
-    editor.create();
+//开始构造
+editor.create();
 });
 //表单提交时，取出富文本域内容，赋值给隐藏域
 function mySubmit() {

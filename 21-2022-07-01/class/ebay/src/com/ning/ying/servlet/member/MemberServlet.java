@@ -61,7 +61,7 @@ public class MemberServlet extends HttpServlet {
             }
             if ("memberNews".equals(method)) {//新闻
                 resp.sendRedirect("Member/memberNewList.jsp");
-            }
+        }
             if ("memberUser".equals(method)) {//用户表
                 resp.sendRedirect("Member/memberUser.jsp");
             }
@@ -114,4 +114,8 @@ public class MemberServlet extends HttpServlet {
         session.setAttribute("onePageUserList", 1);//改变起始页数
     }
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
 }

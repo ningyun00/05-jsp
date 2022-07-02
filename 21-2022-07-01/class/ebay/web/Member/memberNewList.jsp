@@ -26,6 +26,7 @@
         <script type = "text/javascript" src = "../js/jquery-1.12.4.js"></script>
         <script type = "text/javascript" src = "../js/member/memberNewList.js"></script>
 
+
         <title>易趣商城管理控制台</title>
     </head>
     <body>
@@ -40,29 +41,29 @@
                     <p></p>
                     <div class = "mem_tit">资讯列表</div>
                     <form action = "/ning.ying/NewsServlet?method=updateNews" method = "post" id = "formNews">
-                        <table border = "0" class = "order_tab" style = "width:930px; text-align:center; margin-bottom:30px;" cellspacing = "0" cellpadding = "0">
+                    <table border = "0" class = "order_tab" style = "width:930px; text-align:center; margin-bottom:30px;" cellspacing = "0" cellpadding = "0">
                             <thead>
-                                <tr>
-                                    <td width = "20%">编号</td>
-                                    <td width = "60%">内容</td>
-                                    <td width = "20%" colspan = "2">操作</td>
-                                </tr>
+                        <tr>
+                            <td width = "20%">编号</td>
+                            <td width = "60%">内容</td>
+                            <td width = "20%" colspan = "2">操作</td>
+                        </tr>
                             </thead>
                             <tbody id = "tbody1_table1">
                             </tbody>
                             <tbody>
                                 <c:forEach items = "${sessionScope.newsAll}" var = "newsAll">
-                                    <tr>
+                        <tr>
                                         <td name = "newsId">${newsAll.id}</td>
                                         <td>${newsAll.content}</td>
                                         <td width = "145"><a onclick = "updateNew(${newsAll.id})">修改</a></td>
                                         <td width = "145">
                                             <a href = "/ning.ying/NewsServlet?method=deleteNews&newsId=${newsAll.id}" onclick = "return confirm('是否删除')">删除</a>
                                         </td>
-                                    </tr>
+                        </tr>
                                 </c:forEach>
                             </tbody>
-                        </table>
+                    </table>
                     </form>
                     <!--分页-->
                     <div class = "pages">
@@ -95,6 +96,7 @@
                         <a onclick = "alert('已经到底啦！')" class = "p_pre">下一页</a>
                         <%}%>
                     </div>
+
                 </div>
             </div>
             <!--End 用户中心 End-->
@@ -182,7 +184,10 @@
             </div>
             <!--End Footer End -->
         </div>
+
     </body>
+
+
     <!--[if IE 6]>
     <script src = "//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
