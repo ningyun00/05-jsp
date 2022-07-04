@@ -153,4 +153,56 @@ public class UserDao {
         }
         return row;
     }
+    /**
+     * 根据id查询用户
+     */
+    public EabyUser selectUser(int id) {
+        EabyUser eabyUser = new EabyUser();
+        try {
+            connection = BaseDao.getConnection();
+            preparedStatement = connection.prepareStatement("SELECT * FROM `eaby_user` WHERE id = ?");
+            preparedStatement.setInt(1,id);
+            resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                eabyUser.setId(resultSet.getInt("id"));
+                eabyUser.setLoginName(resultSet.getString("loginName"));
+                eabyUser.setPassword(resultSet.getString("password"));
+                eabyUser.setSex(resultSet.getInt("sex"));
+                eabyUser.setUserName(resultSet.getString("userName"));
+                eabyUser.setMobile(resultSet.getString("mobile"));
+                eabyUser.setEmail(resultSet.getString("email"));
+                eabyUser.setIdentityCode(resultSet.getString("identityCode"));
+                eabyUser.setType(resultSet.getInt("type"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            BaseDao.close(resultSet, preparedStatement, connection);
+        }
+        return eabyUser;
+    }
+    /**
+     * 根据id查询用户
+     */
+    public int updateUser(EabyUser eabyUser) {
+        int row = 0;
+        try {
+            connection = BaseDao.getConnection();
+            preparedStatement = connection.prepareStatement("UPDATE `eaby_user` SET loginName = ?,userName = ?,sex = ?,identityCode = ?,email = ?,mobile = ?,TYPE = ? WHERE id = ?");
+            preparedStatement.setString(1,eabyUser.getLoginName());
+            preparedStatement.setString(2,eabyUser.getUserName());
+            preparedStatement.setInt(3, eabyUser.getSex());
+            preparedStatement.setString(4, eabyUser.getIdentityCode());
+            preparedStatement.setString(5, eabyUser.getEmail());
+            preparedStatement.setString(6, eabyUser.getMobile());
+            preparedStatement.setInt(7, eabyUser.getType());
+            preparedStatement.setInt(8, eabyUser.getId());
+            row = preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            BaseDao.close(resultSet, preparedStatement, connection);
+        }
+        return row  ;
+    }
 }

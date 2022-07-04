@@ -1,5 +1,6 @@
 package com.ning.ying.servlet.member;
 
+import com.google.gson.Gson;
 import com.ning.ying.dao.UserDao;
 import com.ning.ying.entity.EabyUser;
 
@@ -51,6 +52,53 @@ public class MemberUserListServlet extends HttpServlet {
         if ("delete".equals(method)) {//删除用户
             delete(request, response);
         }
+        if ("updateUser".equals(method)) {//查询要修改的用户
+            updateUser(request, response);
+        }
+        if ("update".equals(method)) {
+            update(request, response);
+        }
+    }
+
+    /**
+     * 修改用户信息
+     */
+    private void update(HttpServletRequest req, HttpServletResponse resp) {
+        int id = Integer.parseInt(req.getParameter("id"));
+        String loginName = req.getParameter("loginName");
+        String userName = req.getParameter("userName");
+        int sex = Integer.parseInt(req.getParameter("sex"));
+        String idC = req.getParameter("idCard");
+        String email = req.getParameter("email");
+        int sexT = Integer.parseInt(req.getParameter("sexT"));
+        String method = req.getParameter("moder");
+        EabyUser eabyUser = new EabyUser();
+        eabyUser.setId(id);
+        eabyUser.setLoginName(loginName);
+        eabyUser.setUserName(userName);
+        eabyUser.setSex(sex);
+        eabyUser.setIdentityCode(idC);
+        eabyUser.setEmail(email);
+        eabyUser.setType(sexT);
+        eabyUser.setMobile(method);
+        System.out.println(eabyUser);
+        int row = new UserDao().updateUser(eabyUser);
+        if (row>0){
+            printWriter.write("<script>alert('修改成功');location.href='/ning.ying/MemberServlet?method=memberUserList';</script>");
+        }else{
+            printWriter.write("<script>alert('修改失败');location.href='/ning.ying/MemberServlet?method=memberUserList';</script>");
+        }
+    }
+
+    /**
+     * 查询要修改的用户信息
+     */
+    private void updateUser(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        int id = Integer.parseInt(req.getParameter("uid"));
+        Object eabyUser = userDao.selectUser(id);
+        Gson gson = new Gson();
+        String json = gson.toJson(eabyUser);
+        resp.getWriter().print(json);
     }
 
     /**
@@ -60,9 +108,9 @@ public class MemberUserListServlet extends HttpServlet {
         try {
             int id = Integer.parseInt(request.getParameter("id"));
             int row = new UserDao().deleteUser(id);
-            if (row>0){
+            if (row > 0) {
                 printWriter.write("<script>alert('删除成功');location.href='/ning.ying/MemberServlet?method=memberUserList';</script>");
-            }else{
+            } else {
                 printWriter.write("<script>alert('删除失败');location.href='/ning.ying/MemberServlet?method=memberUserList';</script>");
             }
         } catch (Exception e) {

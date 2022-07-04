@@ -96,17 +96,47 @@
                         <a onclick = "alert('到底啦！不要点啦！')" class = "p_pre">下一页</a>
                         <%}%>
                     </div>
+                    <div id = "update"></div>
                 </div>
             </div>
             <!--End 用户中心 End-->
+            <script type = "text/javascript" src = "../js/jquery-1.12.4.js"></script>
             <script type = "text/javascript">
+                /*           $(function () {
+                               $(".m_right").html($(".update_div1").html());//清空
+                           });*/
+
                 function updateUserList(id) {
-                    $(".m_right").html($(".update_div1").html());//清空
-                    alert(id);
+                    $("#update").html($(".update_div1").html());//清空
                     $.ajax({
-                        type:"POST",
-                        url:"",
+                        type: "POST",
+                        url: "/ning.ying/MemberUserListServlet",
+                        data: "method=updateUser&uid=" + id,
+                        dataType: "json",
+                        success: function (msg) {
+                            $("#loginName").val(msg.loginName);
+                            $("#userName").val(msg.userName);
+                            $("#idCard").val(msg.identityCode);
+                            $("#email").val(msg.email);
+                            $("#moder").val(msg.mobile);
+                            $("#userId").val(msg.id);
+                            if (msg.sex === 1) {
+                                $("#sex1").prop("checked", true);
+                            } else {
+                                $("#sex2").prop("checked", true);
+                            }
+                            if (msg.type === 1) {
+                                $("#type1").prop("checked", true);
+                            }
+                            if (msg.type === 0) {
+                                $("#type2").prop("checked", true);
+                            }
+                        }
                     });
+                }
+
+                function exitUpdate() {
+                    $("#update").html("");//清空
                 }
             </script>
             <!--Begin Footer Begin -->
@@ -196,31 +226,54 @@
     </body>
     <%--修改--%>
     <div class = "update_div1" style = "display: none">
-        <div class = "update_div2"">
-            <form action = "">
+        <div class = "update_div2">
+            <form action = "/ning.ying/MemberUserListServlet?method=update" method = "post">
                 <h2 style = "color: red;text-align: center; line-height: 50px">修改用户信息</h2>
-                <table border = "0" class = "order_tab" style = "width:930px; text-align:center; margin-bottom:30px;" cellspacing = "0" cellpadding = "0">
-                    <thead>
-                        <tr style = "height: 36px">
-                            <td>用户名称</td>
-                            <td>真实姓名</td>
-                            <td>性别</td>
-                            <td>身份证</td>
-                            <td>邮箱</td>
-                            <td>手机号码</td>
+                <table style = "margin: auto;padding: 0px;collapse: 0px;">
+                    <thead style = "margin: 0px;padding: 0px">
+                        <input type = "hidden" id="userId" name="id">
+                        <tr style = "height: 36px;line-height: 0px">
+                            <td style = "padding: 0px;margin: 0px;width: 100px">用户名称</td>
+                            <td><input type = "text" value = "" id = "loginName" name="loginName"></td>
                         </tr>
                         <tr>
-                            <td>用户名称</td>
                             <td>真实姓名</td>
+                            <td><input type = "text" value = "" id = "userName" name="userName"></td>
+                        </tr>
+                        <tr>
                             <td>性别</td>
+                            <td>
+                                <input type = "radio" value = "1" id = "sex1" name = "sex">男
+                                <input type = "radio" value = "0" id = "sex2" name = "sex">女
+                            </td>
+                        </tr>
+                        <tr>
                             <td>身份证</td>
+                            <td><input type = "text" value = "" id = "idCard" name="idCard"></td>
+                        </tr>
+                        <tr>
                             <td>邮箱</td>
+                            <td><input type = "text" value = "" id = "email" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td>用户类型</td>
+                            <td>
+                                <input type = "radio" value = "1" id = "type1" name = "sexT">管理员
+                                <input type = "radio" value = "0" id = "type2" name = "sexT">普通用户
+                            </td>
+                        </tr>
+                        <tr>
                             <td>手机号码</td>
+                            <td><input type = "text" value = "" id = "moder" name="moder"></td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td colspan = "6" style = "text-align: right">
+                            <td>
+                                <button style = "width: 150px; height: 25px;" onclick = "return exitUpdate()">取消
+                                </button>
+                            </td>
+                            <td style = "text-align: right">
                                 <input style = "width: 150px; height: 25px;" type = "submit" value = "修改">
                             </td>
                         </tr>
