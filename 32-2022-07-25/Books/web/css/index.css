@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.div_bottom {
+    width: 910px;
+    margin: auto;
+    position: relative;
+}
+
+.div_title {
+    width: 910px;
+    height: 50px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.div_search {
+    width: 910px;
+    margin: auto;
+}
+
+.p_title {
+    margin-top: 20px;
+    font-size: 50px;
+    text-align: center;
+    color: #1e5ac2;
+    letter-spacing: 50px;
+}
+
+.div_table {
+    width: 910px;
+    text-align: center;
+}
+
+.c_thead {
+    text-align: center;
+    height: 30px;
+}
+
+.c_tr {
+    height: 30px;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+td {
+    margin: 0;
+    padding: 0;
+}
+
+.div_find {
+    margin: auto;
+    background: -webkit-gradient(linear, left 0, right 0, from(#80d96c), to(rgba(36, 153, 255, 0.5)));
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: slateblue;
+    font-size: 18px;
+}
+
+.div_pageMax {
+    margin: auto;
+    width: 600px;
+    height: 30px;
+    text-align: center;
+}
+
+ul {
+    text-align: center;
+    width: 600px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    width: 25px;
+    height: 25px;
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+    margin-top: 3px;
+}
+
+.div_page {
+    margin: auto;
+    background: -webkit-gradient(linear, left 0, right 0, from(#80d96c), to(rgba(36, 153, 255, 0.5)));
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: slateblue;
+    font-size: 18px;
+}
+
+.div_image {
+    width: 150px;
+    height: 180px;
+    position: absolute;
+    left: -200px;
+    top: 185px;
+}
+
+.div_introduce {
+    width: 200px;
+    height: 305px;
+    position: absolute;
+    right: -220px;
+    top: 150px;
+}
+#add_css td{
+    border-color: white;
+    border-right: white;
+    border-left: white;
+}
