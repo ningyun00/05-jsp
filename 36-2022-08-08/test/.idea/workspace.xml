@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="StudentManager:war exploded" />
+      <artifact name="test:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2bd18ff-40c7-470e-b511-3fd53641ac3a" name="Default Changelist" comment="" />
+    <list default="true" id="fc6ecb64-5f8f-4a6e-9504-273cfafd88f8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,14 +16,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="BaseDao" />
-        <option value="JavaScript File" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/web/index.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -32,7 +34,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectId" id="2CpBQA52LkCgCvgFwZqkltHfcch" />
+  <component name="ProjectId" id="2D3dlj5FlLzhhwRyhUZEZOC1eg0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -47,24 +49,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/js" />
+    <property name="idea.background.editor" value="D:\0-4-图片\いつ\樱花姑娘.jpg,25,scale,center" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.18169014" />
     <property name="project.structure.side.proportion" value="0.2051282" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\S2\05-jsp\35-2022-08-03\StudentManager\web\js" />
-      <recent name="E:\S2\05-jsp\35-2022-08-03\StudentManager\web\WEB-INF\lib" />
-      <recent name="E:\S2\05-jsp\35-2022-08-03\StudentManager\src" />
-      <recent name="E:\S2\05-jsp\35-2022-08-03\StudentManager\src\com\ning\filter" />
+      <recent name="E:\S2\05-jsp\36-2022-08-08\test\web\WEB-INF\lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.52">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ning.Test" />
-      <module name="StudentManager" />
+      <module name="test" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ning.*" />
@@ -79,14 +79,14 @@
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
-        <artifact name="StudentManager:war exploded">
+        <artifact name="test:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/StudentManager" />
+            <option name="CONTEXT_PATH" value="/ning" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="e737b006-9f15-48d6-91f0-1450c04796f0" />
+        <option name="BASE_DIRECTORY_NAME" value="d3a52f65-9f7d-4908-abbe-840e1bc48f3b" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -94,7 +94,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="64356" />
+        <option name="DEBUG_PORT" value="58203" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -159,7 +159,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="StudentManager:war exploded" />
+          <artifact name="test:war exploded" />
         </option>
       </method>
     </configuration>
@@ -172,15 +172,21 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b2bd18ff-40c7-470e-b511-3fd53641ac3a" name="Default Changelist" comment="" />
-      <created>1659489626643</created>
+      <changelist id="fc6ecb64-5f8f-4a6e-9504-273cfafd88f8" name="Default Changelist" comment="" />
+      <created>1659931854976</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1659489626643</updated>
-      <workItem from="1659489629720" duration="7897000" />
-      <workItem from="1659622564575" duration="1629000" />
-      <workItem from="1659928906963" duration="1429000" />
-      <workItem from="1659931230209" duration="390000" />
+      <updated>1659931854976</updated>
+      <workItem from="1659931856507" duration="429000" />
+      <workItem from="1660011483943" duration="24000" />
+      <workItem from="1660016159517" duration="684000" />
+      <workItem from="1660017084623" duration="1080000" />
+      <workItem from="1660091103776" duration="167000" />
+      <workItem from="1660091302622" duration="2290000" />
+      <workItem from="1660093665024" duration="471000" />
+      <workItem from="1660095189192" duration="327000" />
+      <workItem from="1660095583123" duration="7538000" />
+      <workItem from="1660178531361" duration="119000" />
     </task>
     <servers />
   </component>
